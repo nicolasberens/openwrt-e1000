@@ -75,6 +75,7 @@ define Device/ubnt_edgerouter-6p
 endef
 TARGET_DEVICES += ubnt_edgerouter-6p
 
+
 ERLITE_CMDLINE:=-mtdparts=phys_mapped_flash:512k(boot0)ro,512k(boot1)ro,64k(eeprom)ro root=/dev/sda2 rootfstype=squashfs,ext4 rootwait
 define Device/ubnt_edgerouter-lite
   DEVICE_VENDOR := Ubiquiti
@@ -116,5 +117,7 @@ define Device/cisco_vedge1000
   DEVICE_DTS := cn6130_cisco_vedge1000
 endef
 TARGET_DEVICES += cisco_vedge1000
+
+include $(SUBTARGET).mk
 
 $(eval $(call BuildImage))
