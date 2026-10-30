@@ -56,7 +56,8 @@ platform_copy_config() {
 		;;
 	er|\
 	ubnt,edgerouter-4|\
-	ubnt,edgerouter-6p)
+	ubnt,edgerouter-6p|\
+	ubnt,edgerouter-8-xg)
 		platform_copy_config_helper /dev/mmcblk0p1 vfat
 		;;
 	cisco,vedge1000)
@@ -129,7 +130,8 @@ platform_do_upgrade() {
 	case "$board" in
 	er | \
 	ubnt,edgerouter-4 | \
-	ubnt,edgerouter-6p)
+	ubnt,edgerouter-6p|\
+	ubnt,edgerouter-8-xg)
 		kernel=/dev/mmcblk0p1
 		;;
 	ubnt,erlite|\

@@ -120,4 +120,6 @@ define Device/cisco_vedge1000
 endef
 TARGET_DEVICES += cisco_vedge1000
 
+include $(SUBTARGET).mk
+
 $(eval $(call BuildImage))
